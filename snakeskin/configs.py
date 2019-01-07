@@ -12,7 +12,10 @@ def load_defaults(path = "default.yaml"):
 
 	if path is None:
 		path = "default.yaml"
-	return yaml.load(open(path, "r"))
+	try:
+		return yaml.load(open(path, "r"))
+	except:
+		return {}
 
 def impute_defaults(this_config, defaults = None):
 
