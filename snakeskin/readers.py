@@ -33,9 +33,15 @@ def read_list_file(path, delim = None, expect = None, strict = False, comment = 
 						rez.append(none)
 					else:
 						rez.append(pieces[ii])
-				yield rez
+				if len(rez) == 1:
+					yield rez[0]
+				else:
+					yield rez
 			else:
-				yield pieces[:expect]
+				if expect == 1:
+					yield pieces[0]
+				else:
+					yield pieces[:expect]
 
 def file_prefix(path):
 
