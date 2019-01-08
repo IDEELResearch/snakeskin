@@ -14,7 +14,7 @@ setup(
 	# scripts=["bin/snakeit"],
 	install_requires = [
 		"snakemake",
-		"yaml"
+		"pyyaml"
 	],
 	zip_safe = False
 )

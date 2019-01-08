@@ -6,7 +6,9 @@ Simple tools for guessing and manipulating common genomics file formats.
 
 import os
 import sys
+
 from re import search as re_search
+from collections import OrderedDict
 
 INDEX_PAIRS = {
 	"vcf.gz": "tbi",

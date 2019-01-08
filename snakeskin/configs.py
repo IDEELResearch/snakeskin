@@ -21,7 +21,7 @@ def impute_defaults(this_config, defaults = None):
 
 	if isinstance(defaults, dict):
 		## assume defaults already loaded
-		this_default = default
+		this_default = defaults
 	else:
 		## try to load defaults from file
 		this_default = load_defaults(defaults)
